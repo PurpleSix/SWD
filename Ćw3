@@ -1,0 +1,129 @@
+
+from keras.models import Sequential
+from keras.layers import *
+import numpy as np
+
+m = Sequential()
+m.add(Dense(2,input_dim=2, activation='tanh'))
+m.add(Dense(12,input_dim=2, activation='tanh'))
+#m.add(Activation('tanh'))
+
+m.add(Dense(1,activation='sigmoid'))
+
+#m.add(Activation('sigmoid'))
+
+X = np.array([[0,0],[0,1],[1,0],[1,1]],'float32')
+Y = np.array([[0],[1],[1],[0]],'float32')
+
+m.compile(optimizer='adam',loss='binary_crossentropy')
+m.fit(X,Y,batch_size=1,epochs=200,verbose=0)
+print(m.predict(X))
+
+##############################################################
+
+from keras.models import Sequential
+from keras.layers import *
+import numpy as np
+
+m = Sequential()
+m.add(Dense(2,input_dim=2, activation='tanh'))
+m.add(Dense(12,input_dim=2, activation='tanh'))
+#m.add(Activation('tanh'))
+
+m.add(Dense(1,activation='sigmoid'))
+
+#m.add(Activation('sigmoid'))
+
+X = np.array([[0,0],[0,1],[1,0],[1,1]],'float32')
+Y = np.array([[1],[0],[0],[1]],'float32')
+
+m.compile(optimizer='adam',loss='binary_crossentropy')
+m.fit(X,Y,batch_size=1,epochs=200,verbose=0)
+print(m.predict(X))
+
+####################################################
+
+from keras.models import Sequential
+from keras.layers import *
+import numpy as np
+
+m = Sequential()
+m.add(Dense(2,input_dim=2, activation='tanh'))
+m.add(Dense(12,input_dim=2, activation='tanh'))
+#m.add(Activation('tanh'))
+
+m.add(Dense(1,activation='sigmoid'))
+
+#m.add(Activation('sigmoid'))
+
+X = np.array([[0,0],[0,1],[1,0],[1,1]],'float32')
+Y = np.array([[0],[1],[1],[1]],'float32')
+
+m.compile(optimizer='adam',loss='binary_crossentropy')
+m.fit(X,Y,batch_size=1,epochs=200,verbose=0)
+print(m.predict(X))
+
+
+#############################################################
+from keras.models import Sequential
+from keras.layers import *
+import numpy as np
+
+m = Sequential()
+m.add(Dense(2,input_dim=2, activation='tanh'))
+m.add(Dense(12,input_dim=2, activation='tanh'))
+#m.add(Activation('tanh'))
+
+m.add(Dense(1,activation='sigmoid'))
+
+#m.add(Activation('sigmoid'))
+
+X = np.array([[0,0],[0,1],[1,0],[1,1]],'float32')
+Y = np.array([[1],[0],[0],[0]],'float32')
+
+m.compile(optimizer='adam',loss='binary_crossentropy')
+m.fit(X,Y,batch_size=1,epochs=200,verbose=0)
+print(m.predict(X))
+
+###########################################################
+from keras.models import Sequential
+from keras.layers import *
+import numpy as np
+
+m = Sequential()
+m.add(Dense(4,input_dim=2, activation='relu'))
+m.add(Dropout(0.2))
+m.add(Dense(6, activation='relu'))
+m.add(Dropout(0.2))
+m.add(Dense(8, activation='relu'))
+m.add(Dropout(0.4))
+
+X = np.array([[0,0],[0,1],[1,0],[1,1]],'float32')
+Y = np.array([[0],[1],[1],[0]],'float32')
+
+m.compile(optimizer='adam',loss='binary_crossentropy')
+m.fit(X,Y,batch_size=1,epochs=200,verbose=0)
+print(m.predict(X))
+
+
+
+###############################################################
+from keras.models import Sequential
+from keras.layers import *
+import numpy as np
+
+m = Sequential()
+m.add(Dense(4,input_dim=2, activation='tanh'))
+m.add(Dropout(0.2))
+m.add(Dense(6, activation='tanh'))
+m.add(Dropout(0.2))
+m.add(Dense(8, activation='tanh'))
+m.add(Dropout(0.4))
+
+X = np.array([[0,0],[0,1],[1,0],[1,1]],'float32')
+Y = np.array([[0],[1],[1],[0]],'float32')
+
+m.compile(optimizer='adam',loss='binary_crossentropy')
+m.fit(X,Y,batch_size=1,epochs=200,verbose=0)
+print(m.predict(X))
+
